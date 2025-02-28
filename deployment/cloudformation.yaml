@@ -52,16 +52,16 @@ Resources:
                 LogFilePrefix: "frontend-logs/"
 
     LoggingS3Bucket:
-    Type: AWS::S3::Bucket
-    Properties:
-        PublicAccessBlockConfiguration:
-            BlockPublicAcls: true
-            BlockPublicPolicy: true
-            IgnorePublicAcls: true
-            RestrictPublicBuckets: true
-        OwnershipControls:
-            Rules:
-                - ObjectOwnership: ObjectWriter
+      Type: AWS::S3::Bucket
+      Properties:
+          PublicAccessBlockConfiguration:
+              BlockPublicAcls: true
+              BlockPublicPolicy: true
+              IgnorePublicAcls: true
+              RestrictPublicBuckets: true
+          OwnershipControls:
+              Rules:
+                  - ObjectOwnership: ObjectWriter
 
     # Lambda layer
     LambdaAWSLayer:
